@@ -43,7 +43,7 @@ properly:
     require 'test/unit'
     require 'rack/test'
 
-    set :environment, :test
+    ENV['RACK_ENV'] = 'test'
 
     class HelloWorldTest < Test::Unit::TestCase
       include Rack::Test::Methods
